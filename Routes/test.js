@@ -30,6 +30,7 @@ router.post(
 
             await user.save();
             res.status(201).json({message: "User created successfully"});
+            console.log(user);
         } catch (error) {
             res.status(500).json({error: "Failed to save user"});
         }
