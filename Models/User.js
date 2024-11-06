@@ -4,19 +4,18 @@ const {Schema} = mongoose;
 const Userschema = new Schema({
     name: {
         type: String,
-        require: true,
+        required: true,
     },
     ph_no: {
         type: Number,
-        require: true,
+        required: true,
         unique: true,
     },
     password: {
         type: String,
-        require: true,
+        required: true,
     },
 });
 
 // exporting to use in different files
-
 module.exports = mongoose.model("user", Userschema);

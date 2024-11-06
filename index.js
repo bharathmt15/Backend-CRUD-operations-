@@ -3,8 +3,10 @@ const express = require("express");
 mongoconnection();
 const app = express();
 const port = 4000;
+const cors = require("cors");
 
 app.use(express.json());
+app.use(cors());
 
 // creating my own routes
 app.use("/api/test", require("./Routes/test"));
