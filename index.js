@@ -6,7 +6,13 @@ const port = 4000;
 const cors = require("cors");
 
 app.use(express.json());
-app.use(cors());
+app.use(
+    cors({
+        origin: ["https://Smart-city-travel.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true,
+    })
+);
 
 // creating my own routes
 app.use("/api/test", require("./Routes/test"));
