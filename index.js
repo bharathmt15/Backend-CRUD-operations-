@@ -3,16 +3,10 @@ const express = require("express");
 mongoconnection();
 const app = express();
 const port = 4000;
-const cors = require("cors");
+var cors = require("cors");
 
 app.use(express.json());
-app.use(
-    cors({
-        origin: ["https://Smart-city-travel.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true,
-    })
-);
+app.use(cors({origin: "http://localhost:3000", credentials: true}));
 
 // creating my own routes
 app.use("/api/test", require("./Routes/test"));
