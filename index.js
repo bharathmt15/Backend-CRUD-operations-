@@ -2,7 +2,7 @@ const mongoconnection = require("./db");
 const express = require("express");
 mongoconnection();
 const app = express();
-const port = 4000;
+const port = 4002;
 var cors = require("cors");
 
 app.use(express.json());
